@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CSVRoles - Discord Bot</title>
+  <title>CSV,Roles - Discord Bot</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.png">
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -51,37 +51,76 @@
       
     <div class="w-full flex items-center justify-between">
       <div class="flex items-center text-slate-50 font-bold text-2xl lg:text-4xl"> 
-         <image class="h-8 fill-current pr-2" src="static/csv_roles_icon.svg" /> CSVRoles
+         <image class="h-8 fill-current pr-2" src="static/csv_roles_icon.svg" /> CSV,Roles
       </div>
         <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dlchamp" data-color="#ff8000" data-emoji="🍺"  data-font="Cookie" data-text="Buy me a beer" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00" ></script>
   </div>
 
   <!--Main-->
-  <div class="container px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+  <div class="container pt-20 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
     
     <!--Left Col-->
     <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-      <h1 class="my-2 text-3xl md:text-5xl text-white font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Are you manually assigning roles to 100s of new members?<br>Do you have a CSV file with a list of those members?</h1>
-      <p class="leading-normal text-orange-600 text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Saving loads of time is only one click away!</p>
+      <h1 class="my-2 text-2xl md:text-5xl text-white font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Stop wasting hours manually updating 100s of member roles.</h1>
+      <p class="leading-normal text-orange-600 text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Save time with the CSV,Roles!</p>
     
       <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
         <div class="rounded-md shadow">
-              <a href="https://discord.com/api/oauth2/authorize?client_id=975530567955267589&permissions=8&scope=bot" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">Invite to Server</a>
+              <a href="https://discord.com/api/oauth2/authorize?client_id=975530567955267589&permissions=268512320&scope=bot" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">Invite to Server</a>
             </div>
       </div>
-
+      
     </div>
     
     <!--Right Col-->
-    <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
-      <video autoplay loop>
+    <div class="w-full xl:w-3/5 pt-6 overflow-hidden rounded-sm">
+      <video autoplay loop preload='auto' plays-inline>
         <source src="static/video/example.webm" type="video/webm">
       </video>
+
+      <!-- /* Workaround for Microsoft Edge Legacy */  -->
+      <script>if (document.querySelector('.slide video')) { document.querySelector('.slide video').play(); }</script>
     </div>
+
+ 
+
+     <!--second row--> 
+     <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden mt-40 pr-5 mx-auto">
+        <h1 class="my-2 text-2xl md:text-5xl text-white font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Prequisites...</h1>
+        <div>
+          <ul class='pt-5'>
+            <li class="py-2">Bot's top role MUST be higher than any role that you plan to bulk manage</li>
+            <li class="py-2">The CSV file MUST be named "members.csv" - <span class='italic text-sm font-light'>This prevents the bot from accidentally trying to parse other CSV uploads.</span></li>
+            <li class="py-2">Required Permissions:</li>
+              <ul class='py-2'>
+                <li class="py-2 ml-5 font-bold">Manage Roles - <span class='italic text-sm font-light'>adding roles to members</span></li>
+                <li class="py-2 ml-5 font-bold">View Channel/Read Messages - <span class='italic text-sm font-light'>seeing and parsing your messages and attachments</span></li>
+                <li class="py-2 ml-5 font-bold">Send Message/Manage Messages - <span class='italic text-sm font-light'>sending progress and completion messages/delete original message and attachment</span></li>
+                <li class="py-2 ml-5 font-bold">Add Reactions - <span class='italic text-sm font-light'>adding reaction to final message to allow command user to delete completion/error messages</span></li>
+              </ul>
+          </ul>
+        </div>
+      </div>
+
+    <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden mt-25 pr-5 mx-auto">
+        <h1 class="my-2 text-2xl md:text-5xl text-white font-bold leading-tight text-center md:text-left slide-in-bottom-h1">How it works...</h1>
+        <div>
+          <ul class='pt-5'>
+          <li class="py-2">Migrate your data to a CSV file</li>
+          <li class="py-2">Make sure your member name/ids are the second column</li>
+          <li class="py-2">Head into a Discord channel the bot can see and read messages in</li>
+          <li class="py-2">Copy the role ID for the role you wish to assign your members</li>
+          <li class="py-2">Paste it into the message box and attach your members.csv file</li>
+          <li class="py-2">Send your message and wait for CSVRoles to work it's magic.</li>
+          </ul>
+      </div>
+    </div>  
+    
+  </div>
     
     <!--Footer-->
     <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-      <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; DLCHAMP - CSVRoles 2022</a>
+      <a class="text-gray-500 no-underline hover:no-underline" href="https://github.com/dlchamp">&copy; DLCHAMP - CSV,Roles 2022</a>
     </div>
     
   </div>
